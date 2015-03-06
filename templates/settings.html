@@ -1,0 +1,6 @@
+<h2>Settings</h2>
+<label class="control-label">Your location</label>
+<form class="input-group">
+  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Enter a location, leave 'autoip' to automatic detect your location" autocomplete="off" timezone="user.timezone" />
+  <span class="input-group-btn"><button class="btn btn-primary" value="Save" ng-click="save()">Save</button></span>
+</form>

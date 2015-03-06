@@ -1,0 +1,49 @@
+
+#datetime {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px
+}
+#datetime h1 {
+  font-size: 6.3em;
+}
+#datetime h2 {
+  font-size: 1.8em;
+}
+#forecast ul li {
+  font-size: 2.3em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#forecast ul li h3 {
+  font-size: 1.4em;
+  color: #444;
+}
+#forecast ul li .today h3 {
+  color: #4ae;
+}
+#forecast ul li .today h4 {
+  color: #4ae;
+}
+#actionbar {
+  position: absolute;
+  bottom: 1em;
+  right: 1.5em;
+
+}
+#actionbar a {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+#actionbar span {
+  transition: all 0.3s ease;
+}
+
+#actionbar span:hover {
+  color: #4ae;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
