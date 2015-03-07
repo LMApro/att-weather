@@ -10,13 +10,15 @@
 #datetime h2 {
   font-size: 1.6em;
 }
-#forecast ul li {
-  font-size: 2.3em;
+
+#forecast ul li{
+  font-size: 2.5em;
   text-align: center;
   margin-bottom: 40px;
+  transition: all 0.8s ease;
 }
 #forecast ul li h3 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #444;
 }
 #forecast ul li .today h3 {
@@ -25,7 +27,9 @@
 #forecast ul li .today h4 {
   color: #4ae;
 }
-
+#actionbar {
+  transition: all 0.8s ease;
+}
 #actionbar a {
   font-size: 2.2rem;
   color: #333;

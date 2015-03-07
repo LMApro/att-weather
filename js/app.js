@@ -27,6 +27,7 @@ angular.module("attWeather", [
 			        // object that nests the forecasts inside
 			        // the forecast.simpleforecast key
 			        d.resolve(data.forecast.simpleforecast);
+			        // console.dir(data.forecast);
 			      }).error(function(err) {
 			         d.reject(err);
 			      });
