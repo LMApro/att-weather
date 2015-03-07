@@ -11,10 +11,10 @@
     "scripts": ["js/vendor/angular.min.js"]
   },
   "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon144.png"
-    },
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon144.png"
+  },
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "chrome_url_overrides" : {
     "newtab": "tab.html"

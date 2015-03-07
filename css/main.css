@@ -2,13 +2,13 @@
 #datetime {
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 80px
+  margin-bottom: 60px
 }
 #datetime h1 {
   font-size: 6.3em;
 }
 #datetime h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 #forecast ul li {
   font-size: 2.3em;
@@ -25,19 +25,14 @@
 #forecast ul li .today h4 {
   color: #4ae;
 }
-#actionbar {
-  position: absolute;
-  bottom: 1em;
-  right: 1.5em;
 
-}
 #actionbar a {
   font-size: 2.2rem;
   color: #333;
 }
 
 #actionbar span {
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 #actionbar span:hover {
@@ -46,4 +41,9 @@
 
 .btn {
   transition: all 0.3s ease;
+}
+
+::selection {
+  color: #fff;
+  background-color: #4ae;
 }

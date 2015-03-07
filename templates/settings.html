@@ -1,6 +1,8 @@
-<h2>Settings</h2>
-<label class="control-label">Your location</label>
+<h2>Chọn vị trí của bạn</h2>
+<br>
+<p>Để hệ thống tự động xác định vị trí của bạn, click <b>Auto</b></p>
 <form class="input-group">
-  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Enter a location, leave 'autoip' to automatic detect your location" autocomplete="off" timezone="user.timezone" />
-  <span class="input-group-btn"><button class="btn btn-primary" value="Save" ng-click="save()">Save</button></span>
+  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
+  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAuto()">Auto</button></span>
+  <span class="input-group-btn"><button class="btn btn-primary" ng-click="save()"><span class="glyphicon glyphicon-ok"></span></button></span>
 </form>
