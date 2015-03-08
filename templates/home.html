@@ -2,7 +2,7 @@
   <h1>{{date.raw | date: "HH:mm:ss"}}</h1>
   <h2>{{ date.raw | date:'EEEE, MMMM, dd, yyyy' | dateVn }}</h2>
 </div>
-<div id="forecast" class="slide-animation">
+<div id="forecast">
   <!-- <pre>{{ weather.forecast | json }}</pre> -->
   <ul class="row list-unstyled">
     <li ng-repeat="day in weather.forecast.forecastday" class="col-md-3 col-xs-6 repeated-item">

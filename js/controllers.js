@@ -1,8 +1,8 @@
 angular.module("attWeatherControllers", [])
 	.controller("MainCtrl", ["$scope", "$timeout", "Weather", "UserService", function($scope, $timeout, Weather, UserService){
 		$scope.user = UserService.user;
-		// Build the date object
 		$scope.date = {};
+		$scope.weather = {};
 
 		// Update function
 		var updateTime = function(){
@@ -11,13 +11,13 @@ angular.module("attWeatherControllers", [])
 		}
 
 		updateTime();
-
-		$scope.weather = {};
 		
 		Weather
-			.getWeatherForecast($scope.user.location)
-			.then(function(data){
-				$scope.weather.forecast = data;
+			.getWeatherForecast($scope.user.location) //failed
+			.then(function(data){ // stop
+				localStorage.weatherData = angular.toJson(data);
+				$scope.weather.forecast = angular.fromJson(localStorage.weatherData);
+				// console.dir(data);
 			});
 		
 	}])

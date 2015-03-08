@@ -2,7 +2,7 @@
 <br>
 <div class="row" ng-show=true>
 	<div class="col-sm-6">
-		<p>Chọn vị trí của bạn, click <b>Auto</b> để tự động tìm</p>
+		<p>Chọn vị trí của bạn</p>
 		<form class="input-group">
 		  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
 		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAuto()">Tự động</button></span>
@@ -10,7 +10,7 @@
 		<br>
 	</div>
 	<div class="col-sm-6">
-		<p>Nhập tên bạn (tiêu đề hiển thị ở new tab)</p>
+		<p>Tiêu đề cho tab mới</p>
 		<form class="input-group">
 		  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn"/>
 		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>

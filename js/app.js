@@ -30,8 +30,16 @@ angular.module("attWeather", [
 			        d.resolve(data.forecast.simpleforecast);
 			        // console.dir(data.forecast);
 			      }).error(function(err) {
-			         d.reject(err);
+			         if (localStorage.weatherData) {
+			         	 d.resolve(angular.fromJson(localStorage.weatherData));
+			         } else {
+			         	d.reject(err);
+			         }
+			        
+			         
+
 			      });
+			      
 			      return d.promise;
 		    	},
 
@@ -45,6 +53,7 @@ angular.module("attWeather", [
 		    			
 		    		}).error(function(err){
 		    			d.reject(err);
+
 		    		});
 		    		return d.promise;
 		    	}
