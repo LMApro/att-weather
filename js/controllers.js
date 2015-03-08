@@ -29,6 +29,9 @@ angular.module("attWeatherControllers", [])
       	if (!$scope.user.name) {
       		$scope.user.name = "New tab";
       	}
+      	if (!$scope.user.location) {
+      		$scope.user.location = "autoip";
+      	}
       	UserService.save();
       	$scope.saved = true;
    	};
