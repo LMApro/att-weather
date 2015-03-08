@@ -1,6 +1,5 @@
 angular.module("attWeatherControllers", [])
 	.controller("MainCtrl", ["$scope", "$timeout", "Weather", "UserService", function($scope, $timeout, Weather, UserService){
-		
 		$scope.user = UserService.user;
 		// Build the date object
 		$scope.date = {};
@@ -25,15 +24,26 @@ angular.module("attWeatherControllers", [])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", function($scope, $location, UserService, Weather){
 		$scope.user = UserService.user;
-
+		$scope.saved = false;
 		$scope.save = function() {
+      	if (!$scope.user.name) {
+      		$scope.user.name = "New tab";
+      	}
       	UserService.save();
-      	$location.url("/");
+      	$scope.saved = true;
    	};
 
    	$scope.setAuto = function() {
    		$scope.user.location = 'autoip';
-   	}
+   	};
+
+   	$scope.setDefaultName = function() {
+   		$scope.user.name = "New tab";
+   	};
+
+   	$scope.backToHome = function() {
+   		$location.url("/");
+   	};
 
    	$scope.fetchCities = Weather.getCityDetails;
 

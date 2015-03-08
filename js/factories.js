@@ -17,12 +17,13 @@ angular.module("attWeatherFactories", [])
    		user: {},
 
       	save: function() {
-      		sessionStorage.attweather = angular.toJson(service.user);
+      		localStorage.attweather = angular.toJson(service.user);
+            
          },
 
          restore: function() {
       		// Pull from sessionStorage
-      		service.user = angular.fromJson(sessionStorage.attweather) || defaults;
+      		service.user = angular.fromJson(localStorage.attweather) || defaults;
 
          	return service.user;
       	}
