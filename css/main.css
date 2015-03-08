@@ -51,3 +51,35 @@
   color: #fff;
   background-color: #4ae;
 }
+
+.repeated-item.ng-enter, .repeated-item.ng-move {
+  -webkit-transition: all 1.3s ease;
+  -moz-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
+  transition: all 1.3s ease;
+  opacity:0;
+}
+
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity:1;
+}
+
+.repeated-item.ng-leave {
+  -webkit-animation:1.3s my_animation;
+  -moz-animation:1.3s my_animation;
+  -o-animation:1.3s my_animation;
+  animation:1.3s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+

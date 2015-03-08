@@ -27,7 +27,7 @@ angular.module("attWeatherControllers", [])
 		$scope.saved = false;
 		$scope.save = function() {
       	if (!$scope.user.name) {
-      		$scope.user.name = "New tab";
+      		$scope.user.name = "Tab mới";
       	}
       	if (!$scope.user.location) {
       		$scope.user.location = "autoip";
@@ -41,7 +41,7 @@ angular.module("attWeatherControllers", [])
    	};
 
    	$scope.setDefaultName = function() {
-   		$scope.user.name = "New tab";
+   		$scope.user.name = "Tab mới";
    	};
 
    	$scope.backToHome = function() {

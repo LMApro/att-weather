@@ -1,5 +1,6 @@
 angular.module("attWeather", [
 	"ngRoute",
+	"ngAnimate",
 	"attWeatherFilters",
 	"attWeatherControllers",
 	"attWeatherFactories",

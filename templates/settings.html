@@ -1,11 +1,11 @@
-<h2>Settings</h2>
+<h2>Cài đặt</h2>
 <br>
-<div class="row">
+<div class="row" ng-show=true>
 	<div class="col-sm-6">
 		<p>Chọn vị trí của bạn, click <b>Auto</b> để tự động tìm</p>
 		<form class="input-group">
 		  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
-		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAuto()">Auto</button></span>
+		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAuto()">Tự động</button></span>
 		</form>
 		<br>
 	</div>
@@ -13,7 +13,7 @@
 		<p>Nhập tên bạn (tiêu đề hiển thị ở new tab)</p>
 		<form class="input-group">
 		  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn"/>
-		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Default</button></span>
+		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>
 		</form>
 		<br>
 	</div>
@@ -21,7 +21,7 @@
 
 <div class="row">
 	<div class="col-sm-6" style="transition: all 0.5s ease;">
-		<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Save</span></button>
+		<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Lưu</span></button>
 		<button class="btn btn-primary" ng-click="backToHome()"><span class="glyphicon glyphicon-home"></span></button>
 	</div>
 </div>
