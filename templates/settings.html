@@ -1,8 +1,15 @@
-<h2>Chọn vị trí của bạn</h2>
+<h2>Settings</h2>
 <br>
-<p>Để hệ thống tự động xác định vị trí của bạn, click <b>Auto</b></p>
+<p>Chọn vị trí của bạn, click <b>Auto</b> để tự động tìm</p>
 <form class="input-group">
   <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
   <span class="input-group-btn"><button class="btn btn-success" ng-click="setAuto()">Auto</button></span>
   <span class="input-group-btn"><button class="btn btn-primary" ng-click="save()"><span class="glyphicon glyphicon-ok"></span></button></span>
 </form>
+<br>
+<p>Ngôn ngữ
+<div class="input-group-btn">
+	<button class="btn btn-primary" ng-click="">Tiếng Việt</button>
+	<button class="btn btn-primary" ng-click="">English</button>
+</div>
+</p>
