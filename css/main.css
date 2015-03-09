@@ -196,11 +196,19 @@
 
 
 .view.ng-leave {
+<<<<<<< HEAD
     -webkit-animation-name: fadeOutLeft;
     -moz-animation-name: fadeOutLeft;
     -ms-animation-name: fadeOutLeft;
     -o-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
+=======
+    -webkit-animation-name: fadeOutUp;
+    -moz-animation-name: fadeOutUp;
+    -ms-animation-name: fadeOutUp;
+    -o-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+>>>>>>> 49c0a5a02a19e9aab1d8b8291e43455251e19da2
     -webkit-animation-duration: 0.3s;
     -moz-animation-duration: 0.3s;
     -ms-animation-duration: 0.3s;
@@ -223,11 +231,19 @@
     backface-visibility: hidden; 
 }
 .view.ng-enter {
+<<<<<<< HEAD
     -webkit-animation-name: fadeInLeft;
     -moz-animation-name: fadeInLeft;
     -ms-animation-name: fadeInLeft;
     -o-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
+=======
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -ms-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+>>>>>>> 49c0a5a02a19e9aab1d8b8291e43455251e19da2
     -webkit-animation-duration: 0.4s;
     -moz-animation-duration: 0.4s;
     -ms-animation-duration: 0.4s;
