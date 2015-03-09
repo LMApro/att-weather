@@ -13,8 +13,8 @@ angular.module("attWeatherControllers", [])
 		updateTime();
 		
 		Weather
-			.getWeatherForecast($scope.user.location) //failed
-			.then(function(data){ // stop
+			.getWeatherForecast($scope.user.location) 
+			.then(function(data){
 				localStorage.weatherData = angular.toJson(data);
 				$scope.weather.forecast = angular.fromJson(localStorage.weatherData);
 				// console.dir(data);
@@ -36,7 +36,7 @@ angular.module("attWeatherControllers", [])
       	$scope.saved = true;
    	};
 
-   	$scope.setAuto = function() {
+   	$scope.setAutoIp = function() {
    		$scope.user.location = 'autoip';
    	};
 
@@ -50,4 +50,25 @@ angular.module("attWeatherControllers", [])
 
    	$scope.fetchCities = Weather.getCityDetails;
 
+	}])
+
+	.controller("PagesCtrl", ["$scope", function($scope){
+		$scope.pages = [
+			{
+				link: "http://www.google.com",
+				title: "Google"
+			}, 
+			{
+				link: "http://www.tinhte.vn",
+				title: "Tinhte"
+			},
+			{
+				link: "http://kenh14.vn",
+				title: "Kenh 14"
+			},
+			{
+				link: "http://genk.vn",
+				title: "Genk"
+			}
+		];
 	}]);
