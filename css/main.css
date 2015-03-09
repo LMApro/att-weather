@@ -188,12 +188,10 @@
   color: #4ae;
 }
 
-
 ::selection {
   color: #fff;
   background-color: #4ae;
 }
-
 
 .view.ng-leave {
     -webkit-animation-name: fadeOutLeft;

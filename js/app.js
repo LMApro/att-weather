@@ -35,9 +35,6 @@ angular.module("attWeather", [
 			         } else {
 			         	d.reject(err);
 			         }
-			        
-			         
-
 			      });
 			      
 			      return d.promise;

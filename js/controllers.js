@@ -4,7 +4,7 @@ angular.module("attWeatherControllers", [])
 		$scope.date = {};
 		$scope.weather = {};
 
-		// Update function
+		// make the clock
 		var updateTime = function(){
 			$scope.date.raw = new Date();
 			$timeout(updateTime, 1000);
