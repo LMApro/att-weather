@@ -1,0 +1,14 @@
+<a href="#/"><span class="glyphicon glyphicon-home"></span></a>
+<br>
+<div id="recent-pages">
+	<ul class="row list-unstyled">
+		<li ng-repeat="page in pages" class="col-sm-6 col-md-4">
+			<a href="{{page.link}}">
+				<div>
+					<p>{{page.title}}</p>
+					<img ng-src="{{page.thumbnail}}" alt="{{'Alt for ' + page.title}}">
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>

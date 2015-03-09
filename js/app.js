@@ -75,6 +75,10 @@ angular.module("attWeather", [
 				templateUrl: "templates/settings.html",
 				controller: "SettingsCtrl"
 			})
+			.when("/pages", {
+				templateUrl: "templates/recentPages.html",
+				controller: "PagesCtrl"
+			})
 			.otherwise({
 				redirectTo: "/"
 			});
