@@ -1,25 +1,27 @@
-<h2>Cài đặt</h2>
-<div class="row" ng-show=true>
-	<div class="col-sm-6">
-		<p>Chọn vị trí của bạn</p>
-		<form class="input-group">
-		  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
-		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAutoIp()">Tự động</button></span>
-		</form>
-		<br>
+<div id="setting-page">
+	<h2>Cài đặt</h2>
+	<div class="row" ng-show=true>
+		<div class="col-sm-6">
+			<p>Chọn vị trí của bạn</p>
+			<form class="input-group">
+			  <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" />
+			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAutoIp()">Tự động</button></span>
+			</form>
+			<br>
+		</div>
+		<div class="col-sm-6">
+			<p>Tiêu đề cho tab mới</p>
+			<form class="input-group">
+			  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn"/>
+			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>
+			</form>
+			<br>
+		</div>
 	</div>
-	<div class="col-sm-6">
-		<p>Tiêu đề cho tab mới</p>
-		<form class="input-group">
-		  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn"/>
-		  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>
-		</form>
-		<br>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-6">
-		<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Lưu</span></button>
-		<button class="btn btn-primary" ng-click="backToHome()"><span class="glyphicon glyphicon-home"></span></button>
+	<div class="row">
+		<div class="col-sm-6">
+			<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Lưu</span></button>
+			<button class="btn btn-primary" ng-click="backToHome()"><span class="glyphicon glyphicon-home"></span></button>
+		</div>
 	</div>
 </div>

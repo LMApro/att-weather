@@ -69,6 +69,26 @@ angular.module("attWeatherControllers", [])
 			{
 				link: "http://genk.vn",
 				title: "Genk"
+			},
+			{
+				link: "http://mp3.zing.vn",
+				title: "MP3 zing"
+			},
+			{
+				link: "http://www.facebook.com",
+				title: "Facebook"
+			},
+			{
+				link: "http://youtube.com",
+				title: "Youtube"
+			},
+			{
+				link: "http://maps.google.com",
+				title: "Google maps"
+			},
+			{
+				link: "http://sis.hust.edu.vn",
+				title: "SIS"
 			}
 		];
 	}]);

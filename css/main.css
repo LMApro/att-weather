@@ -1,3 +1,5 @@
+/**** Animation effects ****/
+
 @-webkit-keyframes rollIn {
   0% {
     opacity: 0;
@@ -138,21 +140,96 @@
   }
 }
 
+/**** Basic styles ****/
 .container {
   transition: all 0.8s ease;
 }
+
+::selection {
+  color: #fff;
+  background-color: #4ae;
+}
+
+.view.ng-leave {
+     -webkit-animation-name: fadeOutLeft;
+    -moz-animation-name: fadeOutLeft;
+    -ms-animation-name: fadeOutLeft;
+    -o-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;  
+    z-index: 139;
+}
+.view.ng-enter {
+    z-index: 1309;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -ms-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -ms-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; 
+  }
+
+
+
+
+/**** Home page ****/
 
 #datetime {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 60px;
-
 }
+
 #datetime h1 {
   font-size: 6.3em;
 }
+
 #datetime h2 {
   font-size: 1.6em;
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 }
 
 #forecast ul li{
@@ -188,70 +265,9 @@
   color: #4ae;
 }
 
-::selection {
-  color: #fff;
-  background-color: #4ae;
+.view-weather h4 {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 }
-
-.view.ng-leave {
-    -webkit-animation-name: fadeOutLeft;
-    -moz-animation-name: fadeOutLeft;
-    -ms-animation-name: fadeOutLeft;
-    -o-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
-    -ms-animation-duration: 0.3s;
-    -o-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; 
-}
-.view.ng-enter {
-
-    -webkit-animation-name: fadeInLeft;
-    -moz-animation-name: fadeInLeft;
-    -ms-animation-name: fadeInLeft;
-    -o-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-    -webkit-animation-duration: 0.4s;
-    -moz-animation-duration: 0.4s;
-    -ms-animation-duration: 0.4s;
-    -o-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s;
-    -ms-animation-delay: 0.3s;
-    -o-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
 
 .view-weather.ng-enter {
     -webkit-animation-name: rollIn;
@@ -284,3 +300,24 @@
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden; }
+
+/**** Favorite page ****/
+
+#recent-pages .page {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 13px;
+  background-origin: padding-box;
+}
+
+/**** Setting page ****/
+#setting-page {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+.btn {
+  transition: all 0.3s ease;
+}
+
