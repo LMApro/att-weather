@@ -54,6 +54,4 @@ angular.module("attWeatherDirectives", [])
 				};
 			}
 		};
-	})
-	
-	;
+	});

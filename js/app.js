@@ -1,6 +1,7 @@
 angular.module("attWeather", [
 	"ngRoute",
 	"ngAnimate",
+	"ui.bootstrap",
 	"attWeatherFilters",
 	"attWeatherControllers",
 	"attWeatherFactories",
@@ -31,7 +32,7 @@ angular.module("attWeather", [
 			        // console.dir(data.forecast);
 			      }).error(function(err) {
 			         if (localStorage.weatherData) {
-			         	 d.resolve(angular.fromJson(localStorage.weatherData));
+			         	d.resolve(angular.fromJson(localStorage.weatherData));
 			         } else {
 			         	d.reject(err);
 			         }
@@ -46,8 +47,16 @@ angular.module("attWeather", [
 		    			method: "GET",
 		    			url: "http://autocomplete.wunderground.com/" + "aq?query=" + query
 		    		}).success(function(data){
-		    			d.resolve(data.RESULTS);
-		    			
+		    			// d.resolve(data.RESULTS);
+		    			var results = data.RESULTS.map(function(item){
+		    				return {
+		    					lat: item.lat,
+		    					lon: item.lon,
+		    					name: item.name
+		    				};
+		    			});
+		    			d.resolve(results);
+		    			// console.log(results);
 		    		}).error(function(err){
 		    			d.reject(err);
 
@@ -57,8 +66,8 @@ angular.module("attWeather", [
      		};
   		};
 
-  		this.getUrl = function(type, ext){
-  			return "http://api.wunderground.com/api/" + this.apiKey + "/" + type + "/q/" + ext + ".json";
+  		this.getUrl = function(type, query){
+  			return "http://api.wunderground.com/api/" + this.apiKey + "/" + type + "/q/" + query + ".json";
   		};
 	})
 	

@@ -149,68 +149,18 @@
   color: #fff;
   background-color: #4ae;
 }
+.view.ng-enter {
+    -webkit-animation: flipInX 0.5s ease 0.3s both;
+    -o-animation: flipInX 0.5s ease 0.3s both;
+    animation: flipInX 0.5s ease 0.3s both;
+}
 
 .view.ng-leave {
-     -webkit-animation-name: fadeOutLeft;
-    -moz-animation-name: fadeOutLeft;
-    -ms-animation-name: fadeOutLeft;
-    -o-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
-    -ms-animation-duration: 0.3s;
-    -o-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;  
-    z-index: 139;
+    -webkit-animation: rotateOut 0.3s ease-in-out both;
+    -o-animation: rotateOut 0.3s ease-in-out both;
+    animation: rotateOut 0.3s ease-in-out both;
 }
-.view.ng-enter {
-    z-index: 1309;
-    -webkit-animation-name: fadeInLeft;
-    -moz-animation-name: fadeInLeft;
-    -ms-animation-name: fadeInLeft;
-    -o-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
-    -ms-animation-duration: 0.3s;
-    -o-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s;
-    -ms-animation-delay: 0.3s;
-    -o-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; 
-  }
+
 
 
 /**** Home page ****/
@@ -239,7 +189,7 @@
 #forecast ul li h3 {
   font-size: 1.1em;
   color: #444;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 #forecast h4:last-child {
@@ -282,16 +232,19 @@
 }
 
 .view-weather.ng-enter {
-    -webkit-animation-name: rollIn;
+    -webkit-animation: rollIn 0.7s ease 0.4s both;
+    -o-animation: rollIn 0.7s ease 0.4s both;
+    animation: rollIn 0.7s ease 0.4s both;
+    /* -webkit-animation-name: rollIn;
     -moz-animation-name: rollIn;
     -ms-animation-name: rollIn;
     -o-animation-name: rollIn;
     animation-name: rollIn;
-    -webkit-animation-duration: 0.8s;
-    -moz-animation-duration: 0.8s;
-    -ms-animation-duration: 0.8s;
-    -o-animation-duration: 0.8s;
-    animation-duration: 0.8s;
+    -webkit-animation-duration: 0.7s;
+    -moz-animation-duration: 0.7s;
+    -ms-animation-duration: 0.7s;
+    -o-animation-duration: 0.7s;
+    animation-duration: 0.7s;
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     -ms-animation-delay: 0.4s;
@@ -311,7 +264,8 @@
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;  */
+}
 
 /**** Favorite page ****/
 

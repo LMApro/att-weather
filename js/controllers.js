@@ -8,12 +8,23 @@ angular.module("attWeatherControllers", [])
 		var updateTime = function(){
 			$scope.date.raw = new Date();
 			$timeout(updateTime, 1000);
-		}
+		};
+
 
 		updateTime();
-		
+		$scope.getLatLon = function(latlon) {
+			if (latlon !== "autoip") {
+				var start = latlon.indexOf("[");
+				var end = latlon.indexOf("]");
+				return latlon.substring(start+1, end-1);
+			} else {
+				return "autoip";
+			}
+			
+		};
+
 		Weather
-			.getWeatherForecast($scope.user.location) 
+			.getWeatherForecast($scope.getLatLon($scope.user.location))
 			.then(function(data){
 				localStorage.weatherData = angular.toJson(data);
 				$scope.weather.forecast  = angular.fromJson(localStorage.weatherData);
@@ -22,7 +33,7 @@ angular.module("attWeatherControllers", [])
 		
 	}])
 
-	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", function($scope, $location, UserService, Weather){
+	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", "$http", function($scope, $location, UserService, Weather, $http){
 		$scope.user  = UserService.user;
 		$scope.saved = false;
 		$scope.save  = function() {
@@ -32,6 +43,7 @@ angular.module("attWeatherControllers", [])
       	if (!$scope.user.location) {
       		$scope.user.location = "autoip";
       	}
+      	// $scope.user.location = $scope.cityStrings[$scope.cities.indexOf($scope.user.location)];
       	UserService.save();
       	$scope.saved = true;
    	};
@@ -48,7 +60,20 @@ angular.module("attWeatherControllers", [])
    		$location.url("/");
    	};
 
-   	$scope.fetchCities = Weather.getCityDetails;
+   	$scope.getLocation = function(val) {
+		   return $http({
+		   	method: "GET",
+		   	url: "http://autocomplete.wunderground.com/" + "aq?query=" + val
+		   }).then(function(response){
+		   	// console.log(response);
+		   	return response.data.RESULTS.map(function(item){
+		   		var result = item.name + " [" + item.lat + "," + item.lon + "]";
+		   		// console.log(result);
+		   		return result;
+		   	});
+		  
+		   });
+   	};
 
 	}])
 
