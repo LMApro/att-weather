@@ -185,11 +185,11 @@
     -ms-animation-name: fadeInLeft;
     -o-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-    -webkit-animation-duration: 0.4s;
-    -moz-animation-duration: 0.4s;
-    -ms-animation-duration: 0.4s;
-    -o-animation-duration: 0.4s;
-    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
     -ms-animation-delay: 0.3s;
@@ -213,13 +213,11 @@
   }
 
 
-
-
 /**** Home page ****/
 
 #datetime {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 60px;
 }
 
@@ -239,16 +237,30 @@
   transition: all 0.8s ease;
 }
 #forecast ul li h3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #444;
+  margin-top: -2px;
+}
+
+#forecast h4:last-child {
+  margin-top: 23px;
+
+}
+
+#forecast ul li .today {
+  color: #4ae;
 }
 
 #forecast ul li .today h3 {
   color: #4ae;
 }
+
 #forecast ul li .today h4 {
   color: #4ae;
+
 }
+
+
 #actionbar {
   transition: all 0.8s ease;
 }
@@ -265,7 +277,7 @@
   color: #4ae;
 }
 
-.view-weather h4 {
+.view-weather h4, .view-weather h5 {
   font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 }
 

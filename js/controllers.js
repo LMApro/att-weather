@@ -1,7 +1,7 @@
 angular.module("attWeatherControllers", [])
 	.controller("MainCtrl", ["$scope", "$timeout", "Weather", "UserService", function($scope, $timeout, Weather, UserService){
-		$scope.user = UserService.user;
-		$scope.date = {};
+		$scope.user    = UserService.user;
+		$scope.date    = {};
 		$scope.weather = {};
 
 		// make the clock
@@ -16,16 +16,16 @@ angular.module("attWeatherControllers", [])
 			.getWeatherForecast($scope.user.location) 
 			.then(function(data){
 				localStorage.weatherData = angular.toJson(data);
-				$scope.weather.forecast = angular.fromJson(localStorage.weatherData);
+				$scope.weather.forecast  = angular.fromJson(localStorage.weatherData);
 				// console.dir(data);
 			});
 		
 	}])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", function($scope, $location, UserService, Weather){
-		$scope.user = UserService.user;
+		$scope.user  = UserService.user;
 		$scope.saved = false;
-		$scope.save = function() {
+		$scope.save  = function() {
       	if (!$scope.user.name) {
       		$scope.user.name = "Tab mới";
       	}

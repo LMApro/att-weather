@@ -9,6 +9,7 @@
       <div ng-class="{today: $index == 0}">
         <img class="{{ day.icon }}" ng-src="{{ day.icon_url }}" />
         <h3>{{ day.low.celsius + "/" + day.high.celsius }}&deg;C</h3>
+        <h5>Độ ẩm {{day.avehumidity}}%</h5>
         <h4 ng-if="$index == 0">Hôm nay, {{day.date.day}}/{{day.date.month}}</h4>
         <h4 ng-if="$index != 0">{{ day.date.weekday | dayname }}, {{day.date.day}}/{{day.date.month}}</h4>
       </div>
