@@ -34,7 +34,6 @@ angular.module("attWeatherControllers", [])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", "$http", function($scope, $location, UserService, Weather, $http){
 		$scope.user     = UserService.user;
-		$scope.settings = {};
 		$scope.saved    = true;
 		
 		$scope.save  = function() {
@@ -45,7 +44,6 @@ angular.module("attWeatherControllers", [])
       		$scope.user.location = "autoip";
       	}
       	UserService.save();
-      	$scope.settings = angular.fromJson(localStorage.attweather);
       	$scope.saved = true;
    	};
 
@@ -61,8 +59,12 @@ angular.module("attWeatherControllers", [])
    		$location.url("/");
    	};
 
+   	$scope.getSettings = function() {
+   		return angular.fromJson(localStorage.attweather);
+   	};
+
    	$scope.changingSettings = function() {
-   		if (($scope.user.location !== $scope.settings.location) || ($scope.user.name !== $scope.settings.name)) {
+   		if (($scope.user.location !== $scope.getSettings().location) || ($scope.user.name !== $scope.getSettings().name)) {
    			$scope.saved = false;
    		} else {
    			$scope.saved = true;
