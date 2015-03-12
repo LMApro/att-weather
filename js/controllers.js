@@ -20,7 +20,6 @@ angular.module("attWeatherControllers", [])
 			} else {
 				return "autoip";
 			}
-			
 		};
 
 		Weather
@@ -43,7 +42,6 @@ angular.module("attWeatherControllers", [])
       	if (!$scope.user.location) {
       		$scope.user.location = "autoip";
       	}
-      	// $scope.user.location = $scope.cityStrings[$scope.cities.indexOf($scope.user.location)];
       	UserService.save();
       	$scope.saved = true;
    	};
@@ -60,17 +58,32 @@ angular.module("attWeatherControllers", [])
    		$location.url("/");
    	};
 
+   	$scope.changingSettings = function() {
+   		$scope.saved = false;
+   	};
+
    	$scope.getLocation = function(val) {
 		   return $http({
 		   	method: "GET",
 		   	url: "http://autocomplete.wunderground.com/" + "aq?query=" + val
 		   }).then(function(response){
 		   	// console.log(response);
-		   	return response.data.RESULTS.map(function(item){
-		   		var result = item.name + " [" + item.lat + "," + item.lon + "]";
-		   		// console.log(result);
-		   		return result;
-		   	});
+		   	return response.data.RESULTS
+		   		.map(function(item){
+			   		return {
+			   			lat: item.lat,
+			   			lon: item.lon,
+			   			name: item.name
+			   		};
+		   		})
+		   		.filter(function(item){
+		   			return item.lat != -9999 && item.lon != -9999;
+		   		})
+		   		.map(function(item){
+		   			var result = item.name + " [" + item.lat + "," + item.lon + "]";
+			   		// console.log(result);
+			   		return result;
+		   		});
 		  
 		   });
    	};

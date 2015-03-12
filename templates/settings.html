@@ -5,13 +5,9 @@
 			<p>Chọn vị trí của bạn</p>
 			<form class="input-group">
 			  <!-- <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" /> -->
-			  <!-- <input type="text" class="form-control" ng-model="user.location" ng-keyup="fetchCities(user.location)"> -->
-			  	<!-- <select class="form-control" ng-model="user.location" ng-options="city for city in cities"></select> 
-
-
-			  	-->
-			  <input type="text" ng-model="user.location" placeholder="Vị trí của bạn" class="form-control" typeahead="city for city in getLocation($viewValue)" typeahead-loading="loadingLocations">
 			  
+			  	
+			  <input type="text" ng-model="user.location" placeholder="Vị trí của bạn" class="form-control" typeahead="city for city in getLocation($viewValue)" typeahead-loading="loadingLocations" ng-keyup="changingSettings()">
 			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAutoIp()">Tự động</button></span>
 			</form>
 			<br>
@@ -19,7 +15,7 @@
 		<div class="col-sm-6">
 			<p>Tiêu đề cho tab mới</p>
 			<form class="input-group">
-			  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn"/>
+			  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn" ng-keyup="changingSettings()"/>
 			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>
 			</form>
 			<br>

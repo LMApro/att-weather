@@ -39,9 +39,9 @@ angular.module("attWeather", [
 			      });
 			      
 			      return d.promise;
-		    	},
+		    	}
 
-		    	getCityDetails: function(query) {
+		    	/*getCityDetails: function(query) {
 		    		var d = $q.defer();
 		    		$http({
 		    			method: "GET",
@@ -62,7 +62,7 @@ angular.module("attWeather", [
 
 		    		});
 		    		return d.promise;
-		    	}
+		    	}*/
      		};
   		};
 
