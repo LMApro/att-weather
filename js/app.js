@@ -4,8 +4,7 @@ angular.module("attWeather", [
 	"ui.bootstrap",
 	"attWeatherFilters",
 	"attWeatherControllers",
-	"attWeatherFactories",
-	"attWeatherDirectives"
+	"attWeatherFactories"
 	])
 
 	.provider("Weather", function(){
@@ -70,9 +69,4 @@ angular.module("attWeather", [
 	.config(["WeatherProvider", function(WeatherProvider){
 		WeatherProvider.setApiKey("7849e2a87a30dcc7");
 	}]);
-
-	
-
-	
-
 	

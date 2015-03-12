@@ -1,5 +1,5 @@
 angular.module("attWeatherDirectives", [])
-	.directive("autofill", function($timeout){
+	/*.directive("autofill", function($timeout){
 		return {
 			restrict: "EA",
 			scope: {
@@ -54,4 +54,4 @@ angular.module("attWeatherDirectives", [])
 				};
 			}
 		};
-	});
+	})*/;

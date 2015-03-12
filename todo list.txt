@@ -1,0 +1,4 @@
+- language settings
+- temperature settings (celsius/faereinheit)
+- design newtab page
+- do project with Yo

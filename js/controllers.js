@@ -34,7 +34,7 @@ angular.module("attWeatherControllers", [])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", "$http", function($scope, $location, UserService, Weather, $http){
 		$scope.user     = UserService.user;
-		$scope.settings = angular.fromJson(localStorage.attweather);
+		$scope.settings = {};
 		$scope.saved    = true;
 		
 		$scope.save  = function() {
@@ -45,6 +45,7 @@ angular.module("attWeatherControllers", [])
       		$scope.user.location = "autoip";
       	}
       	UserService.save();
+      	$scope.settings = angular.fromJson(localStorage.attweather);
       	$scope.saved = true;
    	};
 
