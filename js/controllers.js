@@ -10,8 +10,8 @@ angular.module("attWeatherControllers", [])
 			$timeout(updateTime, 1000);
 		};
 
-
 		updateTime();
+
 		$scope.getLatLon = function(latlon) {
 			if (latlon !== "autoip") {
 				var start = latlon.indexOf("[");
@@ -33,8 +33,10 @@ angular.module("attWeatherControllers", [])
 	}])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", "$http", function($scope, $location, UserService, Weather, $http){
-		$scope.user  = UserService.user;
-		$scope.saved = false;
+		$scope.user     = UserService.user;
+		$scope.settings = angular.fromJson(localStorage.attweather);
+		$scope.saved    = true;
+		
 		$scope.save  = function() {
       	if (!$scope.user.name) {
       		$scope.user.name = "Tab mới";
@@ -59,30 +61,31 @@ angular.module("attWeatherControllers", [])
    	};
 
    	$scope.changingSettings = function() {
-   		$scope.saved = false;
+   		if (($scope.user.location !== $scope.settings.location) || ($scope.user.name !== $scope.settings.name)) {
+   			$scope.saved = false;
+   		} else {
+   			$scope.saved = true;
+   		}
    	};
 
-   	$scope.getLocation = function(val) {
+   	$scope.getLocation = function(city) {
 		   return $http({
 		   	method: "GET",
-		   	url: "http://autocomplete.wunderground.com/" + "aq?query=" + val
+		   	url: "http://autocomplete.wunderground.com/" + "aq?query=" + city
 		   }).then(function(response){
-		   	// console.log(response);
 		   	return response.data.RESULTS
 		   		.map(function(item){
 			   		return {
-			   			lat: item.lat,
-			   			lon: item.lon,
-			   			name: item.name
+							lat: item.lat,
+							lon: item.lon,
+							name: item.name
 			   		};
 		   		})
 		   		.filter(function(item){
 		   			return item.lat != -9999 && item.lon != -9999;
 		   		})
 		   		.map(function(item){
-		   			var result = item.name + " [" + item.lat + "," + item.lon + "]";
-			   		// console.log(result);
-			   		return result;
+			   		return item.name + " [" + item.lat + "," + item.lon + "]";
 		   		});
 		  
 		   });

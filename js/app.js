@@ -40,29 +40,6 @@ angular.module("attWeather", [
 			      
 			      return d.promise;
 		    	}
-
-		    	/*getCityDetails: function(query) {
-		    		var d = $q.defer();
-		    		$http({
-		    			method: "GET",
-		    			url: "http://autocomplete.wunderground.com/" + "aq?query=" + query
-		    		}).success(function(data){
-		    			// d.resolve(data.RESULTS);
-		    			var results = data.RESULTS.map(function(item){
-		    				return {
-		    					lat: item.lat,
-		    					lon: item.lon,
-		    					name: item.name
-		    				};
-		    			});
-		    			d.resolve(results);
-		    			// console.log(results);
-		    		}).error(function(err){
-		    			d.reject(err);
-
-		    		});
-		    		return d.promise;
-		    	}*/
      		};
   		};
 

@@ -3,10 +3,7 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<p>Chọn vị trí của bạn</p>
-			<form class="input-group">
-			  <!-- <input class="form-control" type="text" ng-model="user.location" auto-fill="fetchCities" placeholder="Nhập vào vị trí của bạn" autocomplete="off" timezone="user.timezone" /> -->
-			  
-			  	
+			<form class="input-group">			  	
 			  <input type="text" ng-model="user.location" placeholder="Vị trí của bạn" class="form-control" typeahead="city for city in getLocation($viewValue)" typeahead-loading="loadingLocations" ng-keyup="changingSettings()">
 			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setAutoIp()">Tự động</button></span>
 			</form>
