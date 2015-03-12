@@ -50,16 +50,16 @@ angular.module("attWeather", [
 	.config(["$routeProvider", function($routeProvider){
 		$routeProvider
 			.when("/", {
-				templateUrl: "templates/home.html",
-				controller: "MainCtrl"
+				templateUrl: "templates/recentPages.html",
+				controller: "PagesCtrl"
+			})
+			.when("/weather", {
+				templateUrl: "templates/weather.html",
+				controller: "WeatherCtrl"
 			})
 			.when("/settings", {
 				templateUrl: "templates/settings.html",
 				controller: "SettingsCtrl"
-			})
-			.when("/pages", {
-				templateUrl: "templates/recentPages.html",
-				controller: "PagesCtrl"
 			})
 			.otherwise({
 				redirectTo: "/"

@@ -1,5 +1,5 @@
 angular.module("attWeatherControllers", [])
-	.controller("MainCtrl", ["$scope", "$timeout", "Weather", "UserService", function($scope, $timeout, Weather, UserService){
+	.controller("WeatherCtrl", ["$scope", "$timeout", "Weather", "UserService", function($scope, $timeout, Weather, UserService){
 		$scope.user    = UserService.user;
 		$scope.date    = {};
 		$scope.weather = {};
