@@ -48,10 +48,12 @@ angular.module("attWeatherControllers", [])
    	};
 
    	$scope.setAutoIp = function() {
+   		$scope.saved = false;
    		$scope.user.location = 'autoip';
    	};
 
    	$scope.setDefaultName = function() {
+   		$scope.saved = false;
    		$scope.user.name = "Tab mới";
    	};
 
