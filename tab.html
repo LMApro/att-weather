@@ -13,7 +13,9 @@
     <div class="container">
       <div ng-view class="view"></div>
     </div>
-    
+    <div id="actionbar" ng-controller="SettingsCtrl">
+      <button class="btn btn-primary" ng-click="location('/settings')"><span class="glyphicon glyphicon-wrench"></span></button>
+    </div>    
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/ui-bootstrap-0.12.1.min.js"></script>
     <script src="js/vendor/angular-route.min.js"></script>
