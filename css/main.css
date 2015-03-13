@@ -15,9 +15,9 @@
 }
 
 .view.ng-leave {
-    -webkit-animation: rotateOut 0.3s ease-in-out both;
-    -o-animation: rotateOut 0.3s ease-in-out both;
-    animation: rotateOut 0.3s ease-in-out both;
+    -webkit-animation: zoomOutUp 0.3s ease-in-out both;
+    -o-animation: zoomOutUp 0.3s ease-in-out both;
+    animation: zoomOutUp 0.3s ease-in-out both;
 }
 
 
