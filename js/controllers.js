@@ -57,8 +57,8 @@ angular.module("attWeatherControllers", [])
    		$scope.user.name = "Tab mới";
    	};
 
-   	$scope.backToHome = function() {
-   		$location.url("/");
+   	$scope.location = function(route) {
+   		$location.url(route);
    	};
 
    	$scope.getSettings = function() {
@@ -66,7 +66,7 @@ angular.module("attWeatherControllers", [])
    	};
 
    	$scope.changingSettings = function() {
-   		if (($scope.user.location !== $scope.getSettings().location) || ($scope.user.name !== $scope.getSettings().name)) {
+   		if (($scope.user.location !== $scope.getSettings().location) || ($scope.user.name !== $scope.getSettings().name) || ($scope.user.tempType !== $scope.getSettings().tempType)) {
    			$scope.saved = false;
    		} else {
    			$scope.saved = true;
@@ -94,6 +94,10 @@ angular.module("attWeatherControllers", [])
 		   		});
 		  
 		   });
+   	};
+
+   	$scope.logTempType = function() {
+   		console.log($scope.user.tempType);
    	};
 
 	}])

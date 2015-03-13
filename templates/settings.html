@@ -12,7 +12,7 @@
 		<div class="col-sm-6">
 			<p>Tiêu đề cho tab mới</p>
 			<form class="input-group">
-			  <input ng-focus="!saved" class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn" ng-keyup="changingSettings()"/>
+			  <input class="form-control" type="text" ng-model="user.name" placeholder="Nhập tên của bạn" ng-keyup="changingSettings()"/>
 			  <span class="input-group-btn"><button class="btn btn-success" ng-click="setDefaultName()">Mặc định</button></span>
 			</form>
 			<br>
@@ -20,8 +20,20 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Lưu</span></button>
-			<button class="btn btn-primary" ng-click="backToHome()"><span class="glyphicon glyphicon-home"></span></button>
+			<p>Đơn vị đo nhiệt độ</p>
+			<label class="radio-inline"><input type="radio" name="tempType" value="celsius" ng-model="user.tempType" ng-checked="true" ng-change="changingSettings()"> Celsius</label>
+			<label class="radio-inline"><input type="radio" name="tempType" value="fahrenheit" ng-model="user.tempType" ng-change="changingSettings()"> Fahrenheit</label>
 		</div>
 	</div>
+		
+	<br>
+	<div class="row">
+		<div class="col-sm-6">
+			<button ng-class="{'btn btn-primary': !saved, 'btn btn-success': saved}" ng-click="save()"><span ng-if="saved" class="glyphicon glyphicon-ok"></span><span ng-if="!saved">Lưu</span></button>
+			<button class="btn btn-primary" ng-click="location('/')"><span class="glyphicon glyphicon-home"></span></button>
+			<button class="btn btn-primary" ng-click="location('/weather')"><span class="glyphicon glyphicon-cloud"></span></button>
+		</div>
+	</div>
+	
+		
 </div>

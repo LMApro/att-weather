@@ -8,7 +8,8 @@
     <li ng-repeat="day in weather.forecast.forecastday" class="col-md-3 col-xs-6 view-weather">
       <div ng-class="{today: $index == 0}">
         <img class="{{ day.icon }}" ng-src="{{ day.icon_url }}" />
-        <h3>{{ day.low.celsius + "/" + day.high.celsius }}&deg;C</h3>
+        <h3 ng-if="user.tempType=='celsius'">{{ day.low.celsius + "/" + day.high.celsius }}&deg;C</h3>
+        <h3 ng-if="user.tempType=='fahrenheit'">{{ day.low.fahrenheit + "/" + day.high.fahrenheit }}&deg;F</h3>
         <h5>Độ ẩm {{day.avehumidity}}%</h5>
         <h4 ng-if="$index == 0">Hôm nay, {{day.date.day}}/{{day.date.month}}</h4>
         <h4 ng-if="$index != 0">{{ day.date.weekday | dayname }}, {{day.date.day}}/{{day.date.month}}</h4>
