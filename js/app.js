@@ -50,10 +50,6 @@ angular.module("attWeather", [
 	.config(["$routeProvider", function($routeProvider){
 		$routeProvider
 			.when("/", {
-				templateUrl: "templates/recentPages.html",
-				controller: "PagesCtrl"
-			})
-			.when("/weather", {
 				templateUrl: "templates/weather.html",
 				controller: "WeatherCtrl"
 			})
