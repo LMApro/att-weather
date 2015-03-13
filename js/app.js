@@ -24,11 +24,7 @@ angular.module("attWeather", [
 			        url: self.getUrl("forecast", city),
 			        cache: true
 			      }).success(function(data) {
-			        // The wunderground API returns the 
-			        // object that nests the forecasts inside
-			        // the forecast.simpleforecast key
 			        d.resolve(data.forecast.simpleforecast);
-			        // console.dir(data.forecast);
 			      }).error(function(err) {
 			         if (localStorage.weatherData) {
 			         	d.resolve(angular.fromJson(localStorage.weatherData));

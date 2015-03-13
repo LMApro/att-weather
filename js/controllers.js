@@ -16,20 +16,27 @@ angular.module("attWeatherControllers", [])
 			if (latlon !== "autoip") {
 				var start = latlon.indexOf("[");
 				var end = latlon.indexOf("]");
-				return latlon.substring(start+1, end-1);
+				return latlon.substring(start + 1, end - 1);
 			} else {
 				return "autoip";
 			}
 		};
 
-		Weather
-			.getWeatherForecast($scope.getLatLon($scope.user.location))
-			.then(function(data){
-				localStorage.weatherData = angular.toJson(data);
-				$scope.weather.forecast  = angular.fromJson(localStorage.weatherData);
-				// console.dir(data);
-			});
-		
+		if ($scope.user.location) {
+			Weather
+				.getWeatherForecast($scope.getLatLon($scope.user.location))
+				.then(function(data){
+					localStorage.weatherData = angular.toJson(data);
+					$scope.weather.forecast  = angular.fromJson(localStorage.weatherData);
+				});
+		} else {
+			Weather
+				.getWeatherForecast("autoip")
+				.then(function(data){
+					localStorage.weatherData = angular.toJson(data);
+					$scope.weather.forecast  = angular.fromJson(localStorage.weatherData);
+				});
+		}
 	}])
 
 	.controller('SettingsCtrl', ['$scope', "$location", "UserService", "Weather", "$http", function($scope, $location, UserService, Weather, $http){

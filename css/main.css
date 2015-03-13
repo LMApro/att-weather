@@ -21,7 +21,6 @@
 }
 
 
-
 /**** Home page ****/
 
 #datetime {
@@ -53,7 +52,6 @@
 
 #forecast h4:last-child {
   margin-top: 23px;
-
 }
 
 #forecast ul li .today {
@@ -66,7 +64,6 @@
 
 #forecast ul li .today h4 {
   color: #4ae;
-
 }
 
 #actionbar {
@@ -74,9 +71,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  
 }
-
 
 .view-weather h4, .view-weather h5 {
   font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
@@ -86,36 +81,6 @@
     -webkit-animation: rollIn 0.7s ease 0.4s both;
     -o-animation: rollIn 0.7s ease 0.4s both;
     animation: rollIn 0.7s ease 0.4s both;
-    /* -webkit-animation-name: rollIn;
-    -moz-animation-name: rollIn;
-    -ms-animation-name: rollIn;
-    -o-animation-name: rollIn;
-    animation-name: rollIn;
-    -webkit-animation-duration: 0.7s;
-    -moz-animation-duration: 0.7s;
-    -ms-animation-duration: 0.7s;
-    -o-animation-duration: 0.7s;
-    animation-duration: 0.7s;
-    -webkit-animation-delay: 0.4s;
-    -moz-animation-delay: 0.4s;
-    -ms-animation-delay: 0.4s;
-    -o-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;  */
 }
 
 /**** Favorite page ****/
@@ -127,7 +92,6 @@
   border-radius: 6px;
   box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.6);
   padding: 13px;
-  background-origin: padding-box;
 }
 
 /**** Setting page ****/
